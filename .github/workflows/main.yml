@@ -56,7 +56,6 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           sudo docker pull minibaevaidar/infra:v10.02.2022
           sudo docker stop $(sudo docker ps -a -q)
