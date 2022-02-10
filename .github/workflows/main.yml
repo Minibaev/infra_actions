@@ -57,6 +57,6 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker pull minibaevaidar/infra
+          sudo docker pull minibaevaidar/infra:v10.02.2022
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 minibaevaidar/infra:v10.02.2022
